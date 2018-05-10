@@ -35,3 +35,13 @@ function unique(array) {
         return accumulator;
     },[]);
 }
+
+const numbers = [1, 2, 3];
+
+function double([number, ...rest]) {
+  	if(rest.length === 0){
+	  	return [number*2];
+    } else {
+      return [number*2, ...double(rest)];
+    }
+}
